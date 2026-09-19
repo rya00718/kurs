@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Paneli</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="layout.css">   
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body>
+
+    <!-- mobil sidebar -->
+     <button class="menu button" type="button">☰</button>
+     
+     
+    <!-- yan panel -->
+    <aside class="sidebar">
+        <h2> Kurs Paneli</h2>
+        <nav>
+            <a href="index.html">Ana Səhifə</a>
+            <a href="kurslar.html">Kurslara Baxın</a>
+            <a href="telebeler.html">Tələbələr</a>
+        </nav>
+    </aside>
+    
+    <!--Əsas hissə-->
+    <div class="main-content">
+<!-- yuxarı hissə -->
+    <header class="topbar">
+        <h1 id="coursetitle">Kurs Paneli</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Axtarış...">
+        <button>Axtar</button>
+    </div>
+    </header>
+<!-- Dashboard Content -->
+ <main class="dashboard">
+    <!-- statistics kartlar -->
+     <section class="statistics">
+        <article class="card">
+            <span>Aktiv Kurslar</span>
+            <strong>8</strong>
+        </article>
+        <article class="card">
+            <span>Ümumi Tələbə sayı</span>
+            <strong>120</strong>
+        </article>
+        <article class="card">
+            <span>Bu həftəki dərslərin sayı</span>
+            <strong>25</strong>
+        </article>
+        <article class="card">
+            <span>Doluluq sayı</span>
+            <strong>75%</strong>
+        </article>
+     </section>
+     <!-- bugunku dersler -->
+     <article class="dashboard-content">
+        <div class="lessons">
+            <h2>Bugünkü Dərslər</h2>
+                <strong>10:00 - HTML Giriş</strong>
+                <div class="status">Active</div>
+                <strong>11:00 - CSS Təməlləri</strong>
+                <div class="status">Active</div>
+                <strong>12:00 - JavaScript Giriş</strong>
+                <div class="status">Active</div>
+        </div>
+        <div class="registirations">
+            <h2>Yeni Qeydiyyatlar</h2>
+            <ul>
+                <li>Əli Məmmədov - HTML&CSS</li>
+                <li>Günay Əliyeva - JavaScript</li>
+                <li>Rəşad Həsənov - Python</li>
+            </ul>
+        </div>
+     </article>
+ </main>
+ </div>
+
+     <!-- <nav>
+        <a href="index.html" class="button">Ana Səhifə</a>
+    </nav>
+    <main>
+        <h2>Icmal</h2>
+        <section class="statistics">
+            <div class="card">
+                <h3>Aktiv Kurslar</h3>
+                <p>8</p>
+            </div>
+            <div class="card">
+                <h3>Ümumi Tələbə sayı</h3>
+                <p>120</p>
+            </div>
+            <div class="card">
+                <h3>Bu həftəki dərslərin sayı</h3>
+                <p>25</p>
+            </div>
+                <div class="card">
+                    <h3>Doluluq sayı</h3>
+                    <p>75%</p>
+                </div>                      
+        </section>
+
+        <section class="dashboard-content">
+            <div class="'lessons">
+            <h2>Bugünkü Dərslər</h2>
+            <ul>
+                <li>10:00 - HTML Giriş</li>
+                <li>11:00 - CSS Təməlləri</li>
+                <li>12:00 - JavaScript Giriş</li>
+            </ul>
+        </section>
+             </div>
+        <div class="registirations">
+            <h2>Yeni Qeydiyyatlar</h2>
+            <ul>
+                <li>Əli Məmmədov - HTML&CSS</li>
+                <li>Günay Əliyeva - JavaScript</li>
+                <li>Rəşad Həsənov - Python</li>
+            </ul>
+        </div>
+    </main> -->
+
+    
+    <!-- toast  -->
+     <div id="toast" class="toast" role="alert" aria-live="polite">
+        </div>
+
+                <!-- Bos veziyyet -->
+    <dialog class="empty-state">
+        <h2>Kurs məlumatları yüklənir...</h2>
+        <p>Siyahida göstəriləcək kurs yoxdur.</p>
+        <button type="button" class="primary-button">Kurs əlavə et</button>
+    </dialog>
+
+    <!-- Xəta veziyyet -->
+    <dialog class="error-state">
+        <h2>Xəta baş verdi</h2>
+        <p>Kurs məlumatlarını yükləmək mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</p>
+        <button type="button" class="primary-button">Yenidən Yüklə</button>
+    </dialog>
+
+    <script src="api.js"></script>
+    <script src="ui.js"></script>
+    <script src="telebeler.js"></script>
+
+</body>
+</html>

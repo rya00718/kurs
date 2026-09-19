@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Paneli</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="layout.css">   
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body>
+
+    <!-- mobile sidebar -->
+     <button class="menu button" type="button">☰</button>    
+    
+     <!-- yan panel -->
+    <aside class="sidebar">
+        <h2> Kurs Paneli</h2>
+        <nav>
+            <a href="index.html">Ana Səhifə</a>
+            <a href="kurslar.html">Kurslara Baxın</a>
+            <a href="telebeler.html">Tələbələr</a>
+        </nav>
+    </aside>
+
+
+    <!--Əsas hissə-->
+    <div class="main-content">
+        <!-- topbar -->
+         <header class="topbar">
+            <h1>Tələbələr</h1>
+            <div class="topbar-search">
+                <span class="user-name">Admin</span>
+                <label for="studentsearch"> Axtar</label>
+                <input type="text" id="studentsearch" placeholder="Tələbələri axtar...">
+            </div >
+             <div class="user-menu">
+        <button type="button">Admin</button>
+    </div>
+          </header>
+    <main>
+        <div class="page-header">
+            <div>
+                <h2>Tələbələr siyahısı</h2>
+                <p>Bütün tələbələri burdan idarə edə bilərsiniz.</p>
+            </div>
+             <button type="button" class="primary-button" id="addStudentButton" >+ Yeni Tələbə əlavə et</button>
+        </div>
+
+
+
+       <!-- filter -->
+        <section class="filters">
+            <!-- search -->
+            <div class="filter-group">
+                <label for="studentsearch">Axtar:</label>
+                <input type="text" id="studentsearch" placeholder="Ad, soyad və ya email ilə axtar...">
+            </div>
+
+
+            <!-- status filter -->
+            <div class="filter-group">
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option value="all">Hamısı</option>
+                    <option value="active">Aktiv</option>
+                    <option value="inactive">Bitmis</option>
+                    <option value=""></option>
+                </select>
+            </div>
+        </section>
+
+
+
+        <!-- student table -->
+         <section class="student-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Email</th>
+                        <th>Yazıldığı vaxt</th>
+                        <th>Status</th>
+                        <th>Əməliyyatlar</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <!-- Tələbələr buraya əlavə olunacaq -->
+
+                </tbody>
+            </table>
+        </section>
+
+
+
+        <!-- pagination -->
+       <nav class="pagination" aria-label="Tələbələr üçün səhifələmə">
+            <button type="button">Əvvəlki</button>
+            <button type="button" class="active">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>    
+            <button type="button">Növbəti</button>
+        </nav>
+
+
+
+
+        <!-- empty state -->
+         <section class="empty-state">
+            <h2>Tələbə əlavə edilməyib</h2>
+            <p>Yeni tələbə əlavə etmək üçün yuxarıdakı "+ Yeni Tələbə əlavə et" düyməsini istifadə edin.</p>
+             <button type="button" class="primary-button" id="addStudentButtonEmpty">+ Yeni Tələbə əlavə et</button>
+         </section>
+
+
+
+         <!-- loading state -->
+            <section class="loading-state">
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+            </section>
+
+
+
+
+            <!-- add edit student modal -->
+             <dialog id="studentModal">
+                <form method="dialog">
+                    <h2 id="modalTitle">Yeni Tələbə əlavə et</h2>
+                    <!-- name -->
+                    <label for="firstName">Ad:</label>
+                    <input type="text" id="firstName" required>
+                    <label for="lastName">Soyad:</label>
+                    <input type="text" id="lastName" required>
+                    <!-- Email -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <!--  -->
+                  
+                    <div class="modal-actions">
+                        <button type="submit" class="primary-button" id="saveStudentButton">Yadda saxla</button>
+                        <button type="button" id="cancelButton">Ləğv et</button>
+                    </div>
+                </form>
+            </dialog>
+
+
+
+
+
+            <!-- delete confirmation modal -->
+             <dialog id="deleteConfirmationModal">
+                <form method="dialog">
+                    <h2>Təsdiqləmə</h2>
+                    <p>Bu tələbəni silmək istədiyinizə əminsinizmi?</p>
+                    <div class="modal-actions">
+                        <button type="submit" class="primary-button" id="confirmDeleteButton">Bəli, sil</button>
+                        <button type="button" id="cancelDeleteButton">Ləğv et</button>
+                    </div>
+                </form>
+            </dialog>
+            <!-- error modal -->
+             <dialog id="errorModal">
+                <h2>Məlumat yüklənmədi</h2>
+                <p>Tələbə məlumatlarını yükləyərkən xəta baş verdi</p>
+                <div class="form-actions">
+                    <button type="button" id="retrybutton">Yenidən cəhd edin
+                    </button>
+                      <button type="button" id="closeErrorModal">Bagla</button>
+                </div>
+             </dialog>
+             <!-- Toast -->
+              <div class="toast" id="toast" role="alert" aria-live="polite">
+                Tələbə ugurla əlavə edildi
+              </div>
+    </main>
+    <!-- shared UI JS -->
+<script src="js/ui.js"> </script>
+<script src="js/telebeler.js"></script>                
+</body>
+</html>

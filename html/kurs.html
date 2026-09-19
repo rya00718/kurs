@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Paneli</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="layout.css">   
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+
+<body>
+
+    <!-- mobil sidebar -->
+     <button class="menu button" type="button">☰</button>     
+    
+     <!-- yan panel -->
+    <aside class="sidebar">
+        <h2> Kurs Paneli</h2>
+        <nav>
+            <a href="index.html">Ana Səhifə</a>
+            <a href="kurslar.html">Kurslara Baxın</a>
+            <a href="telebeler.html">Tələbələr</a>
+        </nav>
+    </aside>
+
+
+    <!--Əsas hissə-->
+     <div class="main-content">
+<!-- yuxarı hissə -->
+    <header class="topbar">
+        <h1 id="course-title">Kurs</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Axtarış...">
+        <button>Axtar</button>
+    </div>
+    </header>
+     <!--sehife mezmunu-->
+     <section class="page-content">
+        <div class="page-header">
+            <div id="courseName">Kurs Adı</div>
+            <p id="courseCategory">Kateqoriya.</p>
+            </div>
+            <a href="kurslar.html" class=" secondary-button">Kurslara Qayıt</a>
+        </div>
+        <main>
+            <!-- Tablar -->
+          <div class="tabs">
+            <button class="tab-button active" data-tab="general" type="button">Ümumi Məlumatlar</button>
+            <button class="tab-button" data-tab="students" type="button">Tələbələr</button>
+            <button class="tab-button" data-tab="lessons" type="button">Cədvəl</button>
+            </div>
+            <!-- Ümumi Məlumatlar -->
+            <div class="tab-content active" id="general">
+                 <div class="course-info">
+                    <!-- tesvir -->
+                    <div class="info-card">
+                        <h3>Təsvir</h3>
+                        <p id="courseDescription">Kursun təsviri burada göstəriləcək.</p></div>
+                        <!-- Müəllim  -->
+                        <div class="info-card">
+                            <h3>Müəllim</h3>
+                            <p id="courseTeacher">Müəllimin məllumatlar yüklənir...</p></div>
+                            <!-- Tarixlər -->
+                        <div class="info-card">
+                            <h3>Tarixlər</h3>
+                                <p> Başlama Tarixi<strong id="courseStartDate">-</strong></p>
+                                <p> Bitiriş Tarixi<strong id="courseEndDate">-</strong></p>
+                            </div>
+                        <!-- Qiymət -->
+                        <div class="info-card">
+                            <h3>Qiymət</h3>
+                            <p ><strong id="coursePrice">-</strong> AZN</p></div>
+                        <!-- Yer Məlumatları -->
+                        <div class="info-card">
+                            <h3>Yer Məlumatları</h3>
+                            <p ><strong id="courseStudentCount">-</strong>/<span id="courseLocation">-</span>tələbə</p></div>
+                            <!-- Status -->
+                               <div class="info-card">
+                                <h3>Status</h3>
+                                <span id="courseStatus" class="status-pill">-</span>
+                            </div>
+                         </div>
+                    </div>
+                    <!-- Tələbələr -->
+                     <div class="tab-content" id="students" hidden>
+                        <div class="section-header">
+                            <h2>Tələbələr</h2>
+                            <button type="button" class="primary-button">+ Yeni Tələbə Əlavə Et</button>
+                            <p > Bu kursa yazılan tələbələr </p>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="data-table">  
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Ad Soyad</th>
+                                        <th>E-Poct</th>
+                                        <th>Telefon</th>
+                                        <th>Qeydiyyat Tarixi</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentTableBody">
+                                    <!-- Tələbə məlumatları burada Js ile yuklenecek -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Cədvəl -->
+                     <div class="tab-content" id="schedule" hidden>
+                        <div class="section-header">
+                            <h2>Dərs Cədvəli</h2>
+                            <p> Bu kursun dərs cədvəli və saatları </p>
+                        </div>
+                    </div>
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Gün</th>
+                                        <th>Başlama Tarixi</th>
+                                        <th>Müddət</th>
+                                        <th>Bitmə Tarixi</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="scheduleTableBody">
+                                    <!-- Cədvəl məlumatları burada Js ile yuklenecek -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>     
+     </section>
+    </main>
+    <!-- toast  -->
+     <div id="toast" class="toast" role="alert" aria-live="polite">
+        <span id="toastMessage">Kurs məlumatları uğurla yeniləndi.</span>
+        </div>
+        <!-- Bos veziyyet -->
+    <dialog class="empty-state">
+        <h2>Kurs məlumatları yüklənir...</h2>
+        <p>Siyahida göstəriləcək kurs yoxdur.</p>
+        <button type="button" class="primary-button">Kurs əlavə et</button>
+    </dialog>
+    <!-- Xəta veziyyet -->
+    <dialog class="error-state">
+        <h2>Xəta baş verdi</h2>
+        <p>Kurs məlumatlarını yükləmək mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</p>
+        <button type="button" class="primary-button">Yenidən Yüklə</button>
+    </dialog>
+
+    <script src="kurs.js"></script>
+    <script src="ui.js"></script>
+    <script src="telebeler.js"></script>
+    
+     </body>
+</html>
