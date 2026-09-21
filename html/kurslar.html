@@ -1,166 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurs Paneli</title>
-    <link rel="stylesheet" href="tokens.css">
-    <link rel="stylesheet" href="layout.css">   
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="components.css">
+    <title>Kurslar - Kurs Mərkəzi Paneli</title>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
+
 <body>
-   
+
     <!-- mobil sidebar -->
-     <button class="menu button" type="button">☰</button>
+    <button class="menu-button" type="button" aria-label="Menyunu aç" aria-expanded="false"
+        aria-controls="sidebar">☰</button>
 
     <!-- yan panel -->
-    <aside class="sidebar">
-        <h2> Kurs Paneli</h2>
-        <nav>
-            <a href="index.html">Ana Səhifə</a>
-            <a href="kurslar.html">Kurslara Baxın</a>
+    <aside class="sidebar" id="sidebar">
+        <p class="sidebar-title"> Kurs Paneli</p>
+        <nav aria-label="Əsas naviqasiya">
+            <a href="panel.html">İcmal</a>
+            <a href="kurslar.html" aria-current="page">Kurslar</a>
             <a href="telebeler.html">Tələbələr</a>
         </nav>
     </aside>
-    
+
     <!--Əsas hissə-->
-        <div class="main-content">
+    <div class="main-content">
         <header class="topbar">
             <h1>Kurslar</h1>
             <div class="topbar-search">
-                <label for="search">Axtarış:</label>
-                <input type="text"
-                 id="search" 
-                 name="search"
-                  placeholder="Kurs axtarın...">
-                <button>Axtar</button>
+                <label for="search">Axtarış</label>
+                <input type="search" id="search" name="search" placeholder="Kurs axtarın...">
+                <button type="button">Axtar</button>
             </div>
             <div class="user-menu">
                 <button type="button">Admin</button>
             </div>
         </header>
         <!-- esas mezmun -->
-         <main>
-            <div class="peage-header">
+        <main>
+            <div class="page-header">
                 <div>
-                <h2>Mövcud Kursların Siyahısı</h2>
-                <button type="button" class="primary-button">+ Yeni Kurs Əlavə Et</button>
-                </div> 
-                <!-- filtirlər -->
-                 <section class="filters">
-                    <div class="filter-group">
+                    <h2>Mövcud kursların Siyahısı</h2>
+                    <button type="button" class="primary-button">Yeni Kurs Əlavə Et</button>
+                </div>
+            </div>
+            <form class="filters" aria-label="Kursları filtirlə">
+                <div class="filter-group">
                     <label for="category">Kateqoriya</label>
-                    <select id="category" name="category">
+                    <select id="category" name="kateqoriya">
                         <option value="">Bütün Kateqoriyalar</option>
                         <option value="web">Veb İnkişafı</option>
-                        <option value="data">Məlumat Analizi</option>
+                        <option value="language">Dil</option>
                         <option value="design">Dizayn</option>
                     </select>
                 </div>
                 <div class="filter-group">
                     <label for="sort">Sırala</label>
-                    <select id="sort" name="sort">
+                    <select id="sort" name="sıralama">
                         <option value="">Sıralama seçin</option>
-                        <option value="name">Ad </option>
-                        <option value="date">Başlama Tarixi</option>
-                        <option value="students">Tələbə Sayı</option>
+                        <option value="ad">Ad </option>
+                        <option value="baslamaTarixi">Başlama Tarixi</option>
+                        <option value="tələbəsayi">Tələbə Sayı</option>
                     </select>
                 </div>
                 <div class="filter-group">
                     <label for="status">Status</label>
                     <select id="status" name="status">
                         <option value="">Bütün Statuslar</option>
-                        <option value="active">Aktiv</option>
-                        <option value="inactive">Bitmiş</option>
-                        <option value="upcoming">Planlaşdırılır</option>
+                        <option value="aktiv">Aktiv</option>
+                        <option value="bitib">Bitib</option>
+                        <option value="planlasdirilir">Planlaşdırılır</option>
                     </select>
                 </div>
-                
-            </section>
-            </div>
+            </form>
             <!-- kurslar cədvəli -->
-             <section class="table-container">
-                <table>
+            <div class="table-container">
+                <table aria-label="Kurslar cədvəli">
                     <thead>
                         <tr>
-                            <th> Kurs Adı</th>
-                            </th>
-                            <th>Kateqoriya</th>
-                            <th>
+                            <th scope="col"> Kurs Adı</th>
+                            <th scope="col">Kateqoriya</th>
+                            <th scope="col">
                                 Başlama Tarixi
                             </th>
-                            <th> Tələbə Sayı </th>
-                            <th>Status</th>
-                            <th>Əməliyyat</th>
+                            <th scope="col"> Tələbə Sayı </th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Əməliyyat</th>
                         </tr>
                     </thead>
                     <tbody id="courseTableBody">
                         <tr>
                             <td>HTML və CSS</td>
                             <td>Veb İnkişafı</td>
-                            <td>15.09.2026</td>
+                            <td><time datetime="2026-09-15">15.09.2026</time></td>
                             <td>30</td>
-                            <td><span class="status upcoming">Planlaşdırılır</span></td>
+                            <td><span class="status-bitmiş">Bitmiş</span></td>
                             <td>
-                                <button type="button">Bax</button>
+                                <a href="kurs.html?id=c101" aria-label="HTML və CSS kursuna bax">Bax</a>
                             </td>
                         </tr>
                         <tr>
                             <td>JavaScript Əsasları</td>
                             <td>Veb İnkişafı</td>
-                            <td>20.09.2026</td>
+                            <td><time datetime="2026-09-30">30.09.2026</time></td>
                             <td>25</td>
-                            <td><span class="status active">Aktiv</span></td>
+                            <td><span class="status-aktiv">Aktiv</span></td>
                             <td>
-                                <button type="button">Bax</button>
+                                 <a href="kurs.html?id=c101" aria-label="HTML və CSS kursuna bax">Bax</a>
                             </td>
                         </tr>
-                        <tr>           
-                            <td>Məlumat Analizi</td>
-                            <td>Məlumat Analizi</td>
-                            <td>25.09.2026</td>
-                            <td>20</td>
-                            <td><span class="status active">Aktiv</span></td>
+                        <tr>
+                            <td>Dil</td>
+                            <td>Dil</td>
+                            <td><time datetime="2026-12-30" >30.12.2026</time></td>
+                            <td>30</td>
+                            <td><span class="status-planlaşdırılır">Planlaşdırılır</span></td>
                             <td>
-                                <button type="button">Bax</button>
+                                <a href="kurs.html?id=c101" aria-label="HTML və CSS kursuna bax">Bax</a>
                             </td>
                         </tr>
                         <tr>
                             <td>UX/UI Dizayn</td>
                             <td>Dizayn</td>
-                            <td>30.09.2026</td>
+                            <td><time datetime="2026-04-12">12.04.2026</time></td>
                             <td>15</td>
-                            <td><span class="status inactive">Bitmiş</span></td>
+                            <td><span class="status-bitmiş">Bitmiş</span></td>
                             <td>
-                                <button type="button">Bax</button>
+                                 <a href="kurs.html?id=c101" aria-label="HTML və CSS kursuna bax">Bax</a>
                             </td>
                         </tr>
                         <!-- Kurs məlumatları burada dinamik olaraq əlavə olunacaq -->
-                          
                     </tbody>
                 </table>
-                <!-- toast  -->
-     <div id="toast" class="toast" role="alert" aria-live="polite">
-        </div>
-             </section>
-    <dialog class="empty-state">
-        <h2>Kurs məlumatları yüklənir...</h2>
-        <p>Siyahida göstəriləcək kurs yoxdur.</p>
-        <button type="button" class="primary-button">Kurs əlavə et</button>
-    </dialog>
-    <!-- Xəta veziyyet -->
-    <dialog class="error-state">
-        <h2>Xəta baş verdi</h2>
-        <p>Kurs məlumatlarını yükləmək mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</p>
-        <button type="button" class="primary-button">Yenidən Yüklə</button>
-    </dialog>
+            </div>
+            <div class="empty-state" hidden>
+                <h2>Kurs hələ əlavə edilməyib</h2>
+                <p>Siyahıda göstəriləcək kurs yoxdur.</p>
+                <button type="button" class="primary-button">Kurs əlavə et</button>
+            </div>
+            <!-- Xəta veziyyet -->
+            <div class="error-state" role="alert" hidden>
+                <h2>Xəta baş verdi</h2>
+                <p>Kurs məlumatlarını yükləmək mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</p>
+                <button type="button" class="primary-button">Yenidən cəhd edin</button>
+            </div>
+            <div class="loading-state" role="status" hidden></div>
+        </main>
+        <!-- toast  -->
+        <div id="toast" class="toast" role="status" hidden> </div>
+    </div>
+    <script src="js/api.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/kurslar.js" defer></script>
 
-         </main>
-         </div>
-    <script src="api.js"></script>
-    <script src="ui.js"></script>
-    <script src="telebeler.js"></script>
-    <script src="kurslar.js"></script>
 </body>
+
 </html>

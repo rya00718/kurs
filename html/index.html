@@ -1,80 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurs Paneli</title>
-    <link rel="stylesheet" href="tokens.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="components.css">
-    </head>
+    <title> Giriş - Kurs Mərkəzi Paneli</title>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">   
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
 <body>
-    <!-- mobil sidebar -->
-     <button class="menu button" type="button">☰</button>     
-
-    <!-- yan panel -->
-    <aside class="sidebar">
-        <h2> Kurs Paneli</h2>
-        <nav>
-            <a href="index.html">Ana Səhifə</a>
-            <a href="kurslar.html">Kurslara Baxın</a>
-            <a href="telebeler.html">Tələbələr</a>
-        </nav>
-    </aside>
-
     <!--Əsas hissə-->
-     <div class="main-content">
     <main>
-            <h2>Giriş</h2>
-            <form id="loginForm">
-               <div>
+        <h1>Giriş</h1>
+        <form id="loginForm">
+            <div>
                 <label for="email">Email</label>
-                <input type="email" 
-                id="email"
-                name="email"
-                placeholder="E-mailnizi daxil edin" required>
-               </div>
-               <div>
+                <input type="email" id="email" name="email" placeholder="E-mailnizi daxil edin" required>
+            </div>
+            <div>
                 <label for="password">Şifrə</label>
-                <input type="password" 
-                id="password"
-                name="password"
-                placeholder="Şifrənizi daxil edin"
-                required>
-                <button type="button" id="togglePassword">Şifrəni Göstər</button>
-               </div>
-            <!-- <p id="errorMessage">Şifrənizi düzgün daxil edin</p> -->
-               <button type="submit">Daxil ol</button>
-            </form>
-
-    <main>
-        <section>
-            <h2>Xoş Gəlmisiniz</h2>
-            <p>Kurs panelimizə xoş gəlmisiniz! Burada öyrənəcəyiniz müxtəlif kurslar mövcuddur.</p>
-            <a href="panel.html" class="button">Kurs Paneli</a>
-            <script src="api.js"></script>
-            <script src="ui.js"></script>
-            <script src="telebeler.js"></script>
-        </section>
-
-        <!-- toast  -->
-     <div id="toast" class="toast" role="alert" aria-live="polite">
-        </div>
-
-                <!-- Bos veziyyet -->
-    <dialog class="empty-state">
-        <h2>Kurs məlumatları yüklənir...</h2>
-        <p>Siyahida göstəriləcək kurs yoxdur.</p>
-        <button type="button" class="primary-button">Kurs əlavə et</button>
-    </dialog>
-
-    <!-- Xəta veziyyet -->
-    <dialog class="error-state">
-        <h2>Xəta baş verdi</h2>
-        <p>Kurs məlumatlarını yükləmək mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</p>
-        <button type="button" class="primary-button">Yenidən Yüklə</button>
-    </dialog>
+                <input type="password" id="password" name="password" placeholder="Şifrənizi daxil edin" required>
+                <button type="button" id="togglePassword" aria-controls="password">Şifrəni Göstər</button>
+            </div>
+            <p id="errorMessage" role="alert" hidden>Şifrənizi düzgün daxil edin</p>
+            <button type="submit">Daxil ol</button>
+        </form>
     </main>
+    <script src="js/api.js" defer></script>
+    <script src="js/ui.js" defer></script>
 </body>
+
 </html>
