@@ -1,0 +1,98 @@
+:root{
+    --color-bg: #f8f8f8;
+    --color-surface: #ffffff;
+    --color--surface-muted: #f1f5f1;
+    --color-text: #0f172a;
+    --color-text-muted: #475569;
+    --color-border: #cbd5e1;
+    --color-border-strong: #64748b;
+
+    /*  Rənglər: əsas və təhlükə  */
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-on-primary: #ffffff;
+    --color-danger:#b91c1c;
+    --color-danger-hover: #991b1b;
+    --color-on-danger: #ffffff;
+    --color-focus: #1d4ed8;
+
+    /* sidebar */
+    --color-sidebar-bg: #0f172a;
+    --color-sidebar-text: #e2e8f0;
+    --color-sidebar-hover-bg: #1e293b;
+    --color-sidebar-active-bg: #2563eb;
+    --color-sidebar-active-text: #ffffff;
+
+    /* status nisani */
+    --color-status-aktiv-bg: #dcfce7;
+    --color-status-aktiv-text: #166534;
+    --color-status-bitib-bg: #e2e8f0;
+    --color-status-bitib-text: #334155;
+    --color-status-planlasdirilir-bg: #fef3c7;
+    --color-status-planlasdirilir-text: #92400e;
+    --color-status-dondurulub-bg: #dbeafe;
+    --color-status-dondurulub-text: #1e40af;
+
+
+    /* toast modal skeleton  */
+    --color-toast-bg: #0f172a;
+    --color-toast-text: #ffffff;
+    --color-overlay: rgba(15, 23, 42, 0.55);
+    --color-skeleton: #e2e8f0;
+    --color-skeleton-highlight: #f1f5f9;
+
+    /* bosluq  */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+
+    /* srift*/
+    --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-family-heading: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.25;
+    --line-height-base: 1.5;
+
+    /* kunc radiusu*/
+    --radius-sm: 0.25rem;
+    --radius-md: 05rem;
+    --radius-lg:0.75rem;
+    --radius-full: 9999px;
+
+    /* kolge*/
+    --shadow-sm: 0 1px 2px rgba (15, 23, 42, 0.08)
+    --shadow-md: 0 4px 12px rgba (15, 23, 42, 0.10)
+    --shadow-lg: 0 12px 32px rgba (15, 23, 42, 0.18)
+
+    /* layout*/
+    --sidebar-width: 16rem;
+    --sidebar-height: 4rem;
+    --content-max-width: 75rem;
+    --control-height: 2.5rem;
+
+    /* focus */
+    --focus-ring-width: 3px;
+    --focus-ring-offset: 2px;
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+
+    /* /* qat*/
+    --z-sidebar: 100;
+    --z--modal: 200;
+    --z-toast: 300;
+}
