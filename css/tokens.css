@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-bg: #f8f8f8;
     --color-surface: #ffffff;
     --color--surface-muted: #f1f5f1;
@@ -11,7 +11,7 @@
     --color-primary: #2563eb;
     --color-primary-hover: #1d4ed8;
     --color-on-primary: #ffffff;
-    --color-danger:#b91c1c;
+    --color-danger: #b91c1c;
     --color-danger-hover: #991b1b;
     --color-on-danger: #ffffff;
     --color-focus: #1d4ed8;
@@ -71,16 +71,13 @@
     /* kunc radiusu*/
     --radius-sm: 0.25rem;
     --radius-md: 05rem;
-    --radius-lg:0.75rem;
+    --radius-lg: 0.75rem;
     --radius-full: 9999px;
 
     /* kolge*/
-    --shadow-sm: 0 1px 2px rgba (15, 23, 42, 0.08)
-    --shadow-md: 0 4px 12px rgba (15, 23, 42, 0.10)
-    --shadow-lg: 0 12px 32px rgba (15, 23, 42, 0.18)
-
-    /* layout*/
-    --sidebar-width: 16rem;
+    --shadow-sm: 0 1px 2px rgba (15, 23, 42, 0.08) --shadow-md: 0 4px 12px rgba (15, 23, 42, 0.10) --shadow-lg: 0 12px 32px rgba (15, 23, 42, 0.18)
+        /* layout*/
+        --sidebar-width: 16rem;
     --sidebar-height: 4rem;
     --content-max-width: 75rem;
     --control-height: 2.5rem;
@@ -91,7 +88,7 @@
     --transition-fast: 150ms ease;
     --transition-base: 250ms ease;
 
-    /* /* qat*/
+    /* qat*/
     --z-sidebar: 100;
     --z--modal: 200;
     --z-toast: 300;

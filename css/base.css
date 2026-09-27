@@ -1,0 +1,96 @@
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    background: var(--color-bg);
+
+}
+
+/* basliqlar metn */
+h1,
+h2,
+h3 {
+    margin: 0 0 var(--space-3);
+    font-family: var(--font-family-heading);
+    line-height: var(--line-height-tight);
+}
+
+h1 {
+    font-size: var(--font-size-xl);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+}
+
+p {
+    margin: 0 0 var(--space-3);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-hover)
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* hidden*/
+[hidden] {
+    display: none;
+}
+
+/* focus */
+:focus-visible {
+    outline: var(--focus-righ-width) solid var(--color-focus);
+    outline-offset: var(--focus-ring-offset);
+}
+
+/* form sahe */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-weight: var(--font-wegiht-medium);
+}
+
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    width: 100%;
+    min-height: var(--contol-height);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+}
+
+input::placeholder {
+    color: var(--color-text-muted);
+}
+
+[aria-invalid="true"] {
+    border-color: var(--color-danger);
+}
