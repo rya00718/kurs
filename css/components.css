@@ -60,7 +60,7 @@ button:disabled {
 }
 
 .card strong {
-    font-size: var(--font-size-2x1);
+    font-size: var(--font-size-2xl);
     line-height: var(--line-height-tight);
 }
 
@@ -97,9 +97,9 @@ button:disabled {
 /* status nişanı */
 .status,
 .status-aktiv,
-.status-planlasdirilib,
+.status-planlasdirilir,
 .status-bitib,
-.status-dondurulub {
+.status-dondurulub,.status-bitirib {
     display: inline-block;
     padding: var(--space-1) var(--space-3);
     font-size: var(--font-size-sm);
@@ -115,14 +115,19 @@ button:disabled {
     background: var(--color-status-aktiv-bg);
 }
 
-.status-planlasdirilib {
-    color: var(--color-status-planlasdirilib-text);
-    background: var(--color-status-planlasdirilib-bg);
+.status-planlasdirilir {
+    color: var(--color-status-planlasdirilir-text);
+    background: var(--color-status-planlasdirilir-bg);
 }
 
 .status-dondurulub {
     color: var(--color-status-dondurulub-text);
     background: var(--color-status-dondurulub-bg);
+}
+
+.status-bitirib {
+    color: var(--color-status-bitirib-text);
+    background: var(--color-status-bitirib-bg);
 }
 
 /* filtr */

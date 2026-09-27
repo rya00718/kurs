@@ -1,7 +1,7 @@
 :root {
     --color-bg: #f8f8f8;
     --color-surface: #ffffff;
-    --color--surface-muted: #f1f5f1;
+    --color-surface-muted: #f1f5f1;
     --color-text: #0f172a;
     --color-text-muted: #475569;
     --color-border: #cbd5e1;
@@ -32,7 +32,8 @@
     --color-status-planlasdirilir-text: #92400e;
     --color-status-dondurulub-bg: #dbeafe;
     --color-status-dondurulub-text: #1e40af;
-
+    --color-status-bitirib-bg: #e2e8f0;
+    --color-status-bitirib-text: #334155;
 
     /* toast modal skeleton  */
     --color-toast-bg: #0f172a;
@@ -70,14 +71,16 @@
 
     /* kunc radiusu*/
     --radius-sm: 0.25rem;
-    --radius-md: 05rem;
+    --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-full: 9999px;
 
     /* kolge*/
-    --shadow-sm: 0 1px 2px rgba (15, 23, 42, 0.08) --shadow-md: 0 4px 12px rgba (15, 23, 42, 0.10) --shadow-lg: 0 12px 32px rgba (15, 23, 42, 0.18)
-        /* layout*/
-        --sidebar-width: 16rem;
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.10);
+    --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.18);
+    /* layout*/
+    --sidebar-width: 16rem;
     --sidebar-height: 4rem;
     --content-max-width: 75rem;
     --control-height: 2.5rem;
@@ -90,6 +93,6 @@
 
     /* qat*/
     --z-sidebar: 100;
-    --z--modal: 200;
+    --z-modal: 200;
     --z-toast: 300;
 }

@@ -1,0 +1,52 @@
+[
+    {
+        "id": "m-1",
+        "ad": "Aygün Əhmədova",
+        "ixtisas": "Frontend inkişafı"
+    },
+    {
+        "id": "m-2",
+        "ad": "Elvin Cəfərquliyev",
+        "ixtisas": "Backend inkişafı"
+    },
+    {
+        "id": "m-3",
+        "ad": "Nigar Abbasova",
+        "ixtisas": "UX/UI dizayn"
+    },
+    {
+        "id": "m-4",
+        "ad": "Tural Məmmədov",
+        "ixtisas": "İngilis dili"
+    },
+    {
+        "id": "m-5",
+        "ad": "Səbinə Orucova",
+        "ixtisas": "Qrafik dizayn"
+    },
+    {
+        "id": "m-6",
+        "ad":"Əkbər Əkbərov",
+        "ixtisas":"Full-stack inkişaf"
+    },
+    {
+        "id": "m-7",
+        "ad":"Kamran İsmayılov",
+        "ixtisas":"Süni intellekt"
+    },
+    {   
+        "id":"m-8",
+        "ad":"Rauf Nəbiyev",
+        "ixtisas":"İtalyan dili"
+    },
+    {
+        "id":"m-9",
+        "ad":"Gülnar Talıbova",
+        "ixtisas":"Alman dili"
+    },
+    {
+        "id":"m-10",
+        "ad":"Emin Vəlixanov",
+        "ixtisas":"Verilənlər bazası"
+    }
+]

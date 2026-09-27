@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurs Paneli</title>
-    <link rel="stylesheet" href="/css/tokens.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
+    <title>İcmal - Kurs Mərkəzi Paneli</title>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
@@ -18,11 +18,11 @@
         aria-controls="sidebar">☰</button>
 
     <!-- yan panel -->
-    <aside id="sidebar">
-        <p class="sidebar-title"> Kurs Paneli</p>
+    <aside class="sidebar" id="sidebar">
+        <p class="sidebar-title"> Kurs Mərkəzi Paneli</p>
         <nav aria-label="Əsas naviqasiya">
             <a href="panel.html" aria-current="page">İcmal</a>
-            <a href="kurslar.html">Kurslara Baxın</a>
+            <a href="kurslar.html">Kurslar</a>
             <a href="telebeler.html">Tələbələr</a>
         </nav>
     </aside>
@@ -31,39 +31,30 @@
     <div class="main-content">
         <!-- yuxarı hissə -->
         <header class="topbar">
-            <h1 id="coursetitle">Kurs Paneli</h1>
+            <h1 id="pageTitle">İcmal</h1>
             <div class="search-bar">
-                <input type="search" placeholder="Axtarış...">
+                <label for="search" class="visually-hidden">Axtarış</label>
+                <input type="search" id="search" name="search" placeholder="Axtarış...">
                 <button type="button">Axtar</button>
             </div>
+            <div class="user-menu"><button type="button">Admin</button></div>
         </header>
         <!-- Dashboard Content -->
         <main class="dashboard">
             <!-- statistics kartlar -->
-            <div class="statistics">
-                <div class="card">
-                    <span>Aktiv Kurslar</span>
-                    <strong>8</strong>
-                </div>
-                <div class="card">
-                    <span>Ümumi Tələbə sayı</span>
-                    <strong>120</strong>
-                </div>
-                <div class="card">
-                    <span>Bu həftəki dərslərin sayı</span>
-                    <strong>25</strong>
-                </div>
-                <div class="card">
-                    <span>Doluluq sayı</span>
-                    <strong>75%</strong>
-                </div>
+            <div class="statistics" id="statsContainer">
+                <div class="card skeleton"></div>
+                <div class="card skeleton"></div>
+                <div class="card skeleton"></div>
+                <div class="card skeleton"></div>
             </div>
+
             <!-- bugunku dersler -->
-            <div class="dashboard-content">
-                <div class="lessons">
+            <div class="dashboard-content" id="dashboardContent" hidden>
+                <div class="lessons-block">
                     <section class="lessons">
                         <h2>Bugünkü dərslər</h2>
-                        <ul>
+                        <ul id="todayLessonsList">
                             <li>
                                 <time>10:00</time>
                                 <span>HTML Giriş</span>
@@ -82,9 +73,9 @@
                         </ul>
                     </section>
                 </div>
-                <div class="registirations">
+                <div class="registrations">
                     <h2>Yeni Qeydiyyatlar</h2>
-                    <ul>
+                    <ul id="registrationsList">
                         <li>Əli Məmmədov - HTML&CSS</li>
                         <li>Günay Əliyeva - JavaScript</li>
                         <li>Rəşad Həsənov - Python</li>
@@ -99,21 +90,24 @@
     </div>
 
     <!-- Bos veziyyet -->
-    <div class="empty-state">
-        <h2>Kurs məlumatları yüklənir...</h2>
+    <div class="empty-state" hidden>
+        <h2>Heç bir kurs əlavə edilməyib</h2>
         <p>Siyahida göstəriləcək kurs yoxdur.</p>
         <button type="button" class="primary-button">Kurs əlavə et</button>
     </div>
 
     <!-- Xəta veziyyet -->
-    <div class="error-state">
+    <div class="error-state" role="alert" hidden>
         <h2>Xəta baş verdi</h2>
         <p>Kurs məlumatlarını yükləmək mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</p>
         <button type="button" class="primary-button">Yenidən Yüklə</button>
     </div>
 
+
+
     <script src="js/api.js" defer></script>
     <script src="js/ui.js" defer></script>
+    <script src="js/kurslar.js" defer></script>
     <script src="js/telebeler.js" defer></script>
 
 </body>

@@ -1,0 +1,322 @@
+[
+    {
+        "id": "c-101",
+        "ad": "Veb proqramlaşdırma — başlanğıc",
+        "kateqoriya": "proqramlasdirma",
+        "muellimId": "m-1",
+        "status": "aktiv",
+        "baslamaTarixi": "2026-09-15",
+        "bitmeTarixi": "2026-12-20",
+        "qiymet": 520,
+        "yerSayi": 18,
+        "yazilanSayi": 10,
+        "cedvel": [
+            {
+                "gun": "be",
+                "baslama": "11:00",
+                "muddet": 60
+            },
+            {
+                "gun": "ca",
+                "baslama": "19:00",
+                "muddet": 90
+            }
+        ]
+    },
+    {
+        "id": "c-102",
+        "ad": "Backend inkişafı (node.js)",
+        "kateqoriya": "proqramlasdirma",
+        "muellimId": "m-2",
+        "status": "aktiv",
+        "baslamaTarixi": "2026-09-30",
+        "bitmeTarixi": "2027-01-28",
+        "qiymet": 520,
+        "yerSayi": 18,
+        "yazilanSayi": 9,
+        "cedvel": [
+            {
+                "gun": "ça",
+                "baslama": "19:30",
+                "muddet": 150
+            }
+        ]
+    },
+    {
+        "id": "c-103",
+        "ad": "Full-stack veb inkişafı",
+        "kateqoriya": "proqramlasdirma",
+        "muellimId": "m-6",
+        "status": "planlasdirilir",
+        "baslamaTarixi": "2027-02-01",
+        "bitmeTarixi": "2027-12-06",
+        "qiymet": 600,
+        "yerSayi": 22,
+        "yazilanSayi": 4,
+        "cedvel": [
+            {
+                "gun": "çə",
+                "baslama": "19:30",
+                "muddet": 90
+            },
+            {
+                "gun": "şə",
+                "baslama": "10:30",
+                "muddet": 90
+            }
+        ]
+    },
+    {
+        "id": "c-104",
+        "ad": "Süni intellektə giriş",
+        "kateqoriya": "proqramlasdirma",
+        "muellimId": "m-7",
+        "status": "planlasdirilir",
+        "baslamaTarixi": "2027-01-01",
+        "bitmeTarixi": "2027-09-06",
+        "qiymet": 620,
+        "yerSayi": 15,
+        "yazilanSayi": 0,
+        "cedvel": [
+            {
+                "gun": "ca",
+                "baslama": "18:30",
+                "muddet": 60
+            }
+        ]
+    },
+    {
+        "id": "c-105",
+        "ad": "Verilənlər bazası əsasları (SQL)",
+        "kateqoriya": "proqramlasdirma",
+        "muellimId": "m-10",
+        "status": "bitib",
+        "baslamaTarixi": "2026-03-02",
+        "bitmeTarixi": "2026-07-07",
+        "qiymet": 420,
+        "yerSayi": 18,
+        "yazilanSayi": 18,
+        "cedvel": [
+            {
+                "gun": "cü",
+                "baslama": "18:00",
+                "muddet": 150
+            }
+        ]
+    },
+    {
+        "id": "c-106",
+        "ad": "UX/UI Dizayn əsasları",
+        "kateqoriya": "dizayn",
+        "muellimId": "m-3",
+        "status": "aktiv",
+        "baslamaTarixi": "2026-09-20",
+        "bitmeTarixi": "2026-11-25",
+        "qiymet": 450,
+        "yerSayi": 25,
+        "yazilanSayi": 20,
+        "cedvel": [
+            {
+                "gun": "şə",
+                "baslama": "10:00",
+                "muddet": 60
+            }
+        ]
+    },
+    {
+        "id": "c-107",
+        "ad": "Mobil interfeys dizaynı",
+        "kateqoriya": "dizayn",
+        "muellimId": "m-3",
+        "status": "planlasdirilir",
+        "baslamaTarixi": "2027-01-25",
+        "bitmeTarixi": "2027-03-28",
+        "qiymet": 470,
+        "yerSayi": 15,
+        "yazilanSayi": 1,
+        "cedvel": [
+            {
+                "gun": "ba",
+                "baslama": "18:30",
+                "muddet": 60
+            },
+            {
+                "gun": "çə",
+                "baslama": "19:00",
+                "muddet": 100
+            }
+        ]
+    },
+    {
+        "id": "c-108",
+        "ad": "Məhsul dizaynı əsasları",
+        "kateqoriya": "dizayn",
+        "muellimId": "m-3",
+        "status": "bitib",
+        "baslamaTarixi": "2026-04-12",
+        "bitmeTarixi": "2026-07-17",
+        "qiymet": 400,
+        "yerSayi": 20,
+        "yazilanSayi": 20,
+        "cedvel": [
+            {
+                "gun": "be",
+                "baslama": "19:30",
+                "muddet": 90
+            }
+        ]
+    },
+    {
+        "id": "c-109",
+        "ad": "Qrafik dizayn üçün Figma",
+        "kateqoriya": "dizayn",
+        "muellimId": "m-5",
+        "status": "aktiv",
+        "baslamaTarixi": "2026-10-05",
+        "bitmeTarixi": "2027-02-10",
+        "qiymet": 380,
+        "yerSayi": 15,
+        "yazilanSayi": 11,
+        "cedvel": [
+            {
+                "gun": "ça",
+                "baslama": "18:00",
+                "muddet": 60
+            },
+            {
+                "gun": "cü",
+                "baslama": "10:00",
+                "muddet": 100
+            }
+        ]
+    },
+    {
+        "id": "c-110",
+        "ad": "Brend və loqo dizaynı",
+        "kateqoriya": "dizayn",
+        "muellimId": "m-5",
+        "status": "bitib",
+        "baslamaTarixi": "2026-05-04",
+        "bitmeTarixi": "2026-09-09",
+        "qiymet": 400,
+        "yerSayi": 16,
+        "yazilanSayi": 16,
+        "cedvel": [
+            {
+                "gun": "çə",
+                "baslama": "18:00",
+                "muddet": 150
+            }
+        ]
+    },
+    {
+        "id": "c-111",
+        "ad": "İngilis dili — başlanğıc",
+        "kateqoriya": "dil",
+        "muellimId": "m-4",
+        "status": "bitib",
+        "baslamaTarixi": "2026-02-01",
+        "bitmeTarixi": "2026-04-06",
+        "qiymet": 280,
+        "yerSayi": 22,
+        "yazilanSayi": 22,
+        "cedvel": [
+            {
+                "gun": "ca",
+                "baslama": "17:00",
+                "muddet": 100
+            },
+            {
+                "gun": "ba",
+                "baslama": "17:00",
+                "muddet": 120
+            }
+        ]
+    },
+    {
+        "id": "c-112",
+        "ad": "İngilis dili — orta səviyyə",
+        "kateqoriya": "dil",
+        "muellimId": "m-4",
+        "status": "aktiv",
+        "baslamaTarixi": "2026-09-01",
+        "bitmeTarixi": "2026-12-06",
+        "qiymet": 320,
+        "yerSayi": 14,
+        "yazilanSayi": 8,
+        "cedvel": [
+            {
+                "gun": "cü",
+                "baslama": "18:30",
+                "muddet": 60
+            }
+        ]
+    },
+    {
+        "id": "c-113",
+        "ad": "Danışıq klubu — İngilis dili",
+        "kateqoriya": "dil",
+        "muellimId": "m-4",
+        "status": "bitib",
+        "baslamaTarixi": "2026-01-15",
+        "bitmeTarixi": "2026-04-20",
+        "qiymet": 200,
+        "yerSayi": 14,
+        "yazilanSayi": 14,
+        "cedvel": [
+            {
+                "gun": "şə",
+                "baslama": "19:30",
+                "muddet": 100
+            },
+            {
+                "gun": "ça",
+                "baslama": "19:00",
+                "muddet": 90
+            }
+        ]
+    },
+    {
+        "id": "c-114",
+        "ad": "İtalyan dili — başlanğıc",
+        "kateqoriya": "dil",
+        "muellimId": "m-8",
+        "status": "aktiv",
+        "baslamaTarixi": "2026-09-08",
+        "bitmeTarixi": "2026-11-13",
+        "qiymet": 300,
+        "yerSayi": 25,
+        "yazilanSayi": 22,
+        "cedvel": [
+            {
+                "gun": "ba",
+                "baslama": "10:00",
+                "muddet": 90
+            }
+        ]
+    },
+    {
+        "id": "c-115",
+        "ad": "Alman dili — başlanğıc",
+        "kateqoriya": "dil",
+        "muellimId": "m-9",
+        "status": "planlasdirilir",
+        "baslamaTarixi": "2027-01-11",
+        "bitmeTarixi": "2027-03-16",
+        "qiymet": 320,
+        "yerSayi": 14,
+        "yazilanSayi": 3,
+        "cedvel": [
+            {
+                "gun": "be",
+                "baslama": "18:00",
+                "muddet": 120
+            },
+            {
+                "gun": "ca",
+                "baslama": "19:00",
+                "muddet": 90
+            }
+        ]
+    }
+]

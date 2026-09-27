@@ -1,0 +1,272 @@
+[
+  {
+    "id": "s-1",
+    "ad": "Əli Məmmədov",
+    "epoct": "eli.memmedov@example.com",
+    "telefon": "+994 70 845 83 66",
+    "kursId": "c-108",
+    "qeydiyyatTarixi": "2026-01-08",
+    "status": "dondurulub"
+  },
+  {
+    "id": "s-2",
+    "ad": "Rəşad Həsənov",
+    "epoct": "resad.hesenov@example.com",
+    "telefon": "+994 51 999 56 22",
+    "kursId": "c-114",
+    "qeydiyyatTarixi": "2026-02-15",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-3",
+    "ad": "Kamran Vəliyev",
+    "epoct": "kamran.veliyev@example.com",
+    "telefon": "+994 50 239 73 37",
+    "kursId": "c-106",
+    "qeydiyyatTarixi": "2026-03-22",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-4",
+    "ad": "Murad Nəbiyev",
+    "epoct": "murad.nebiyev@example.com",
+    "telefon": "+994 55 788 65 90",
+    "kursId": "c-109",
+    "qeydiyyatTarixi": "2026-04-02",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-5",
+    "ad": "Orxan İsmayılov",
+    "epoct": "orxan.ismayilov@example.com",
+    "telefon": "+994 55 531 74 59",
+    "kursId": "c-104",
+    "qeydiyyatTarixi": "2026-05-09",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-6",
+    "ad": "Fərid Əhmədov",
+    "epoct": "ferid.ehmedov@example.com",
+    "telefon": "+994 77 459 78 84",
+    "kursId": "c-112",
+    "qeydiyyatTarixi": "2026-06-16",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-7",
+    "ad": "Tural Orucov",
+    "epoct": "tural.orucov@example.com",
+    "telefon": "+994 70 698 39 53",
+    "kursId": "c-107",
+    "qeydiyyatTarixi": "2026-07-23",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-8",
+    "ad": "Elvin Quliyev",
+    "epoct": "elvin.quliyev@example.com",
+    "telefon": "+994 50 976 45 87",
+    "kursId": "c-115",
+    "qeydiyyatTarixi": "2026-08-03",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-9",
+    "ad": "Vüsal Mustafayev",
+    "epoct": "vusal.mustafayev@example.com",
+    "telefon": "+994 51 815 51 79",
+    "kursId": "c-105",
+    "qeydiyyatTarixi": "2026-09-10",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-10",
+    "ad": "Elnur Babayev",
+    "epoct": "elnur.babayev@example.com",
+    "telefon": "+994 77 682 23 93",
+    "kursId": "c-101",
+    "qeydiyyatTarixi": "2026-10-17",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-11",
+    "ad": "Samir Yusifov",
+    "epoct": "samir.yusifov@example.com",
+    "telefon": "+994 51 748 83 44",
+    "kursId": "c-110",
+    "qeydiyyatTarixi": "2026-11-24",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-12",
+    "ad": "Anar Əkbərov",
+    "epoct": "anar.ekberov@example.com",
+    "telefon": "+994 55 227 18 71",
+    "kursId": "c-103",
+    "qeydiyyatTarixi": "2026-12-04",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-13",
+    "ad": "Cavid Novruzov",
+    "epoct": "cavid.novruzov@example.com",
+    "telefon": "+994 70 190 54 18",
+    "kursId": "c-102",
+    "qeydiyyatTarixi": "2026-01-11",
+    "status": "dondurulub"
+  },
+  {
+    "id": "s-14",
+    "ad": "Ruslan Hacıyev",
+    "epoct": "ruslan.haciyev@example.com",
+    "telefon": "+994 70 254 12 47",
+    "kursId": "c-113",
+    "qeydiyyatTarixi": "2026-02-18",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-15",
+    "ad": "Tofiq Süleymanov",
+    "epoct": "tofiq.suleymanov@example.com",
+    "telefon": "+994 70 887 63 25",
+    "kursId": "c-111",
+    "qeydiyyatTarixi": "2026-03-25",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-16",
+    "ad": "Aysel Əliyeva",
+    "epoct": "aysel.eliyeva@example.com",
+    "telefon": "+994 50 719 88 15",
+    "kursId": "c-108",
+    "qeydiyyatTarixi": "2026-04-05",
+    "status": "dondurulub"
+  },
+  {
+    "id": "s-17",
+    "ad": "Günay Cəfərova",
+    "epoct": "gunay.ceferova@example.com",
+    "telefon": "+994 70 835 85 52",
+    "kursId": "c-114",
+    "qeydiyyatTarixi": "2026-05-12",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-18",
+    "ad": "Leyla Qasımova",
+    "epoct": "leyla.qasimova@example.com",
+    "telefon": "+994 77 385 74 40",
+    "kursId": "c-106",
+    "qeydiyyatTarixi": "2026-06-19",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-19",
+    "ad": "Nigar Rzayeva",
+    "epoct": "nigar.rzayeva@example.com",
+    "telefon": "+994 50 417 10 19",
+    "kursId": "c-109",
+    "qeydiyyatTarixi": "2026-07-26",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-20",
+    "ad": "Səbinə Talıbova",
+    "epoct": "sebine.talibova@example.com",
+    "telefon": "+994 50 714 78 14",
+    "kursId": "c-104",
+    "qeydiyyatTarixi": "2026-08-06",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-21",
+    "ad": "Zeynəb Hüseynova",
+    "epoct": "zeyneb.huseynova@example.com",
+    "telefon": "+994 51 517 47 88",
+    "kursId": "c-112",
+    "qeydiyyatTarixi": "2026-09-13",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-22",
+    "ad": "Aygün Abbasova",
+    "epoct": "aygun.abbasova@example.com",
+    "telefon": "+994 55 259 98 15",
+    "kursId": "c-107",
+    "qeydiyyatTarixi": "2026-10-20",
+    "status": "dondurulub"
+  },
+  {
+    "id": "s-23",
+    "ad": "Nərgiz Rəhimova",
+    "epoct": "nergiz.rehimova@example.com",
+    "telefon": "+994 55 421 56 27",
+    "kursId": "c-115",
+    "qeydiyyatTarixi": "2026-11-27",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-24",
+    "ad": "Türkan Sadıqova",
+    "epoct": "turkan.sadiqova@example.com",
+    "telefon": "+994 70 485 68 76",
+    "kursId": "c-105",
+    "qeydiyyatTarixi": "2026-12-07",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-25",
+    "ad": "Aytac Kərimova",
+    "epoct": "aytac.kerimova@example.com",
+    "telefon": "+994 70 759 86 97",
+    "kursId": "c-101",
+    "qeydiyyatTarixi": "2026-01-14",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-26",
+    "ad": "Könül Nəsibova",
+    "epoct": "konul.nesibova@example.com",
+    "telefon": "+994 77 205 89 74",
+    "kursId": "c-110",
+    "qeydiyyatTarixi": "2026-02-21",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-27",
+    "ad": "Ulviyyə Zeynalova",
+    "epoct": "ulviyye.zeynalova@example.com",
+    "telefon": "+994 55 541 91 40",
+    "kursId": "c-103",
+    "qeydiyyatTarixi": "2026-03-01",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-28",
+    "ad": "Ləman Bayramova",
+    "epoct": "leman.bayramova@example.com",
+    "telefon": "+994 55 547 43 76",
+    "kursId": "c-102",
+    "qeydiyyatTarixi": "2026-04-08",
+    "status": "aktiv"
+  },
+  {
+    "id": "s-29",
+    "ad": "Aynur Zamanova",
+    "epoct": "aynur.zamanova@example.com",
+    "telefon": "+994 55 661 53 11",
+    "kursId": "c-113",
+    "qeydiyyatTarixi": "2026-05-15",
+    "status": "bitirib"
+  },
+  {
+    "id": "s-30",
+    "ad": "Xəyalə Rəsulova",
+    "epoct": "xeyale.resulova@example.com",
+    "telefon": "+994 70 693 50 12",
+    "kursId": "c-111",
+    "qeydiyyatTarixi": "2026-06-22",
+    "status": "aktiv"
+  }
+]

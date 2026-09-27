@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurslar - Kurs Mərkəzi Paneli</title>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+    <!-- mobil sidebar -->
+    <button class="menu-button" type="button" aria-label="Menyunu aç" aria-expanded="false"
+        aria-controls="sidebar">☰</button>
+
+    <!-- yan panel -->
+    <aside class="sidebar" id="sidebar">
+        <p class="sidebar-title"> Kurs Mərkəzi Paneli</p>
+        <nav aria-label="Əsas naviqasiya">
+            <a href="panel.html">İcmal</a>
+            <a href="kurslar.html" aria-current="page">Kurslar</a>
+            <a href="telebeler.html">Tələbələr</a>
+        </nav>
+    </aside>
+
+    <!--Əsas hissə-->
+    <div class="main-content">
+        <header class="topbar">
+            <h1 id="pageTitle">Kurslar</h1>
+            <div class="search-bar">
+                <label for="search">Axtarış</label>
+                <input type="search" id="search" name="search" placeholder="Kurs axtarın...">
+                <button type="button">Axtar</button>
+            </div>
+            <div class="user-menu">
+                <button type="button">Admin</button>
+            </div>
+        </header>
+        <!-- esas mezmun -->
+        <main>
+            <div class="page-header">
+                <div>
+                    <h2>Mövcud kursların Siyahısı</h2>
+                    <button type="button" class="primary-button" id="addCourseButton">Yeni Kurs Əlavə Et</button>
+                </div>
+            </div>
+            <form class="filters" aria-label="Kursları filtirlə">
+                <div class="filter-group">
+                    <label for="category">Kateqoriya</label>
+                    <select id="category" name="kateqoriya">
+                        <option value="">Bütün Kateqoriyalar</option>
+                        <option value="proqramlasdirma">Proqramlaşdırma</option>
+                        <option value="dil">Dil</option>
+                        <option value="dizayn">Dizayn</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Sırala</label>
+                    <select id="sort" name="sort">
+                        <option value="">Sıralama seçin</option>
+                        <option value="ad">Ad </option>
+                        <option value="baslamaTarixi">Başlama Tarixi</option>
+                        <option value="yazilanSayi">Tələbə Sayı</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="">Bütün Statuslar</option>
+                        <option value="aktiv">Aktiv</option>
+                        <option value="bitib">Bitib</option>
+                        <option value="planlasdirilir">Planlaşdırılır</option>
+                    </select>
+                </div>
+            </form>
+            <!-- kurslar cədvəli -->
+            <div class="table-container">
+                <table aria-label="Kurslar cədvəli">
+                    <thead>
+                        <tr>
+                            <th scope="col"> Kurs Adı</th>
+                            <th scope="col">Kateqoriya</th>
+                            <th scope="col">
+                                Başlama Tarixi
+                            </th>
+                            <th scope="col"> Tələbə Sayı </th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Əməliyyat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courseTableBody">
+                        <!-- Kurs məlumatları burada dinamik olaraq əlavə olunacaq -->
+                    </tbody>
+                </table>
+            </div>
+            <nav class="pagination" aria-label="Kurslar üçün səhifələmə">
+                <button type="button" id="prevPageButton">Əvvəlki</button>
+                <button type="button" class="active">1</button>
+                <button type="button">2</button>
+                <button type="button" id="nextPageButton">Növbəti</button>
+            </nav>
+            <div class="empty-state" hidden>
+                <h2>Kurs hələ əlavə edilməyib</h2>
+                <p>Siyahıda göstəriləcək kurs yoxdur.</p>
+                <button type="button" class="primary-button" id="addCourseButtonEmpty">Kurs əlavə et</button>
+            </div>
+            <!-- Xəta veziyyet -->
+            <div class="error-state" role="alert" hidden>
+                <h2>Xəta baş verdi</h2>
+                <p>Kurs məlumatlarını yükləmək mümkün olmadı. Zəhmət olmasa, yenidən cəhd edin.</p>
+                <button type="button" class="primary-button" id="retryButton">Yenidən cəhd edin</button>
+            </div>
+            <div class="loading-state" role="status" hidden>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+            </div>
+            <dialog id="courseModal">
+                <form method="dialog" id="courseForm">
+                    <h2 id="courseModalTitle">Yeni Kurs Əlavə Et</h2>
+
+                    <label for="courseAd">Kurs adı</label>
+                    <input type="text" id="courseAd" name="ad" required>
+                    <p class="field-error" id="courseAdError" hidden></p>
+
+                    <label for="courseKateqoriya">Kateqoriya</label>
+                    <select id="courseKateqoriya" name="kateqoriya" required>
+                        <option value="">Seçin</option>
+                        <option value="proqramlasdirma">Proqramlaşdırma</option>
+                        <option value="dizayn">Dizayn</option>
+                        <option value="dil">Dil</option>
+                    </select>
+                    <p class="field-error" id="courseKateqoriyaError" hidden></p>
+
+                    <label for="courseMuellim">Müəllim</label>
+                    <select id="courseMuellim" name="muellimId" required></select>
+                    <p class="field-error" id="courseMuellimError" hidden></p>
+
+                    <label for="courseBaslama">Başlama tarixi</label>
+                    <input type="date" id="courseBaslama" name="baslamaTarixi" required>
+                    <p class="field-error" id="courseBaslamaError" hidden></p>
+
+                    <label for="courseBitme">Bitmə tarixi</label>
+                    <input type="date" id="courseBitme" name="bitmeTarixi" required>
+                    <p class="field-error" id="courseBitmeError" hidden></p>
+
+                    <label for="courseQiymet">Qiymət (AZN)</label>
+                    <input type="number" id="courseQiymet" name="qiymet" min="0" required>
+                    <p class="field-error" id="courseQiymetError" hidden></p>
+
+                    <label for="courseYerSayi">Yer sayı</label>
+                    <input type="number" id="courseYerSayi" name="yerSayi" min="1" required>
+                    <p class="field-error" id="courseYerSayiError" hidden></p>
+                    <div class="modal-actions">
+                        <button type="submit" class="primary-button" id="saveCourseButton">Yadda saxla</button>
+                        <button type="button" id="cancelCourseButton">Ləğv et</button>
+                    </div>
+                </form>
+            </dialog>
+            <dialog id="deleteCourseModal">
+                <form method="dialog">
+                    <h2>Təsdiqləmə</h2>
+                    <p>Bu kursu silmək istədiyinizə əminsinizmi?</p>
+                    <div class="modal-actions">
+                        <button type="submit" class="primary-button" id="confirmDeleteCourseButton">Bəli, sil</button>
+                        <button type="button" id="cancelDeleteCourseButton">Ləğv et</button>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+        <!-- toast  -->
+         <div class="toast" id="toast" role="alert" aria-live="polite" hidden>
+                <span id="toastMessage"></span>
+            </div>
+    </div>
+    <script src="js/api.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/kurslar.js" defer></script>
+
+</body>
+
+</html>
