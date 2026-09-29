@@ -366,7 +366,6 @@ body.modal-open {
         text-align: left;
     }
 
-    /* düymələr olan xana: başlıq üstdə, düymələr altda */
     td:has(button) {
         flex-wrap: wrap;
         justify-content: flex-end;
