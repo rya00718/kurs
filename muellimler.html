@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tələbələr - Kurs Mərkəzi Paneli</title>
+    <title>Müəllimlər - Kurs Mərkəzi Paneli</title>
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -21,20 +21,17 @@
     <aside class="sidebar" id="sidebar">
         <p class="sidebar-title"> Kurs Mərkəzi Paneli</p>
         <nav aria-label="Əsas naviqasiya">
-            <a href="panel.html">İcmal</a>
+            <a href="panel.html" >İcmal</a>
             <a href="kurslar.html">Kurslar</a>
-            <a href="telebeler.html" aria-current="page">Tələbələr</a>
-            <a href="muellimler.html">Müəllimlər</a>
+            <a href="telebeler.html">Tələbələr</a>
+            <a href="muellimler.html" aria-current="page">Müəllimlər</a>
         </nav>
     </aside>
-
-
-
     <!--Əsas hissə-->
     <div class="main-content">
         <!-- topbar -->
         <header class="topbar">
-            <h1 id="pageTitle">Tələbələr</h1>
+            <h1 id="pageTitle">Müəllimlər</h1>
             <div class="user-menu">
                 <button type="button">Admin</button>
             </div>
@@ -42,52 +39,52 @@
         <main>
             <div class="page-header">
                 <div>
-                    <h2>Tələbələr siyahısı</h2>
-                    <p>Bütün tələbələri buradan idarə edə bilərsiniz.</p>
+                    <h2>Müəllimlər siyahısı</h2>
+                    <p>Bütün müəllimləri buradan idarə edə bilərsiniz.</p>
                 </div>
-                <button type="button" class="primary-button" id="addStudentButton">Yeni Tələbə əlavə et</button>
+                <button type="button" class="primary-button" id="addTeacherButton">Yeni Müəllim əlavə et</button>
             </div>
 
 
 
             <!-- filter -->
-            <form class="filters" aria-label="Tələbələri filtirlə">
+            <form class="filters" aria-label="Müəllimləri filtirlə">
                 <!-- search -->
                 <div class="filter-group">
-                    <label for="studentsearch">Axtar</label>
-                    <input type="text" id="studentsearch" placeholder="Ad, soyad və ya email ilə axtar...">
+                    <label for="teachersearch">Axtar</label>
+                    <input type="text" id="teachersearch" placeholder="Ad, soyad və ya email ilə axtar...">
                 </div>
 
 
                 <!-- status filter -->
-                <div class="filter-group">
+                <!-- <div class="filter-group">
                     <label for="status">Status</label>
                     <select id="status" name="status">
                         <option value="">Bütün statuslar</option>
                         <option value="aktiv">Aktiv</option>
                         <option value="bitirib">Bitirib</option>
-                        <option value="dondurulub">Dondurulub</option>
+        
                     </select>
-                </div>
+                </div> -->
             </form>
 
 
 
-            <!-- student table -->
+            <!-- teacher table -->
             <div class="table-container">
-                <table aria-label="Tələbələr cədvəli">
+                <table aria-label="Müəllimlər cədvəli">
                     <thead>
                         <tr>
                             <th>Ad</th>
                             <th>E-poçt</th>
                             <th>Telefon</th>
-                            <th>Yazıldığı kurs</th>
-                            <th>Status</th>
+                            <th>Tədris etdiyi kurs</th>
+                            <!-- <th>Status</th> -->
                             <th>Əməliyyatlar</th>
                         </tr>
                     </thead>
-                    <tbody id="studentTableBody">
-                        <!-- Tələbələr buraya əlavə olunacaq -->
+                    <tbody id="teacherTableBody">
+                        <!-- Müəllimlər buraya əlavə olunacaq -->
 
                     </tbody>
                 </table>
@@ -96,7 +93,7 @@
 
 
             <!-- pagination -->
-            <nav class="pagination" aria-label="Tələbələr üçün səhifələmə">
+            <nav class="pagination" aria-label="Müəllimlər üçün səhifələmə">
                 <button type="button" id="prevPageButton">Əvvəlki</button>
                 <button type="button" class="active">1</button>
                 <button type="button">2</button>
@@ -109,9 +106,9 @@
 
             <!-- empty state -->
             <section class="empty-state" hidden>
-                <h2>Tələbə əlavə edilməyib</h2>
-                <p>Yeni tələbə əlavə etmək üçün yuxarıdakı "+ Yeni Tələbə əlavə et" düyməsini istifadə edin.</p>
-                <button type="button" class="primary-button" id="addStudentButtonEmpty">+ Yeni Tələbə əlavə
+                <h2>Müəllim əlavə edilməyib</h2>
+                <p>Yeni müəllim əlavə etmək üçün yuxarıdakı "+ Yeni Müəllim əlavə et" düyməsini istifadə edin.</p>
+                <button type="button" class="primary-button" id="addTeacherButtonEmpty">+ Yeni Müəllim əlavə
                     et</button>
             </section>
 
@@ -128,39 +125,31 @@
 
 
 
-            <!-- add edit student modal -->
-            <dialog id="studentModal">
-                <form method="dialog" id="studentForm">
-                    <h2 id="modalTitle">Yeni Tələbə əlavə et</h2>
+            <!-- add edit teacher modal -->
+            <dialog id="teacherModal">
+                <form method="dialog" id="teacherForm">
+                    <h2 id="modalTitle">Yeni Müəllim əlavə et</h2>
 
-                    <label for="studentAd">Ad Soyad:</label>
-                    <input type="text" id="studentAd" name="ad" required>
-                    <p class="field-error" id="studentAdError" hidden></p>
+                    <label for="teacherAd">Ad Soyad:</label>
+                    <input type="text" id="teacherAd" name="ad" required>
+                    <p class="field-error" id="teacherAdError" hidden></p>
 
-                    <label for="studentEmail">Email:</label>
-                    <input type="email" id="studentEmail" name="epoct" required>
-                    <p class="field-error" id="studentEmailError" hidden></p>
+                    <label for="teacherEmail">Email:</label>
+                    <input type="email" id="teacherEmail" name="email" required>
+                    <p class="field-error" id="teacherEmailError" hidden></p>
 
-                    <label for="studentPhone">Telefon:</label>
-                    <input type="tel" id="studentPhone" name="telefon" required>
-                    <p class="field-error" id="studentPhoneError" hidden></p>
+                    <label for="teacherPhone">Telefon:</label>
+                    <input type="tel" id="teacherPhone" name="telefon" required>
+                    <p class="field-error" id="teacherPhoneError" hidden></p>
 
-                    <label for="studentCourse">Kurs:</label>
-                    <select id="studentCourse" name="kursId" required>
+                    <label for="teacherCourse">Kurs:</label>
+                    <select id="teacherCourse" name="kursId" required>
                         <option value=""> Seçin</option>
                     </select>
-                    <p class="field-error" id="studentCourseError" hidden></p>
-
-                    <label for="studentStatus">Status seçin</label>
-                    <select id="studentStatus" name="status" required>
-                        <option value="">Seçin</option>
-                        <option value="aktiv">Aktiv</option>
-                        <option value="dondurulub">Dondurulub</option>
-                        <option value="bitirib">Bitirib</option>
-                    </select>
+                    <p class="field-error" id="teacherCourseError" hidden></p>
 
                     <div class="modal-actions">
-                        <button type="submit" class="primary-button" id="saveStudentButton">Yadda saxla</button>
+                        <button type="submit" class="primary-button" id="saveTeacherButton">Yadda saxla</button>
                         <button type="button" id="cancelButton">Ləğv et</button>
                     </div>
                 </form>
@@ -174,7 +163,7 @@
             <dialog id="deleteConfirmationModal">
                 <form method="dialog">
                     <h2>Təsdiqləmə</h2>
-                    <p>Bu tələbəni silmək istədiyinizə əminsinizmi?</p>
+                    <p>Bu müəllimi silmək istədiyinizə əminsinizmi?</p>
                     <div class="modal-actions">
                         <button type="submit" class="primary-button" id="confirmDeleteButton">Bəli, sil</button>
                         <button type="button" id="cancelDeleteButton">Ləğv et</button>
@@ -184,7 +173,7 @@
             <!-- error modal -->
             <div class="error-state" role="alert" hidden>
                 <h2>Məlumat yüklənmədi</h2>
-                <p>Tələbə məlumatlarını yükləyərkən xəta baş verdi.</p>
+                <p>Müəllim məlumatlarını yükləyərkən xəta baş verdi.</p>
                 <button type="button" class="primary-button" id="retryButton">Yenidən cəhd edin</button>
             </div>
             <!-- Toast -->
@@ -198,5 +187,3 @@
     <script src="js/ui.js" defer> </script>
     <script src="js/telebeler.js" defer></script>
 </body>
-
-</html>

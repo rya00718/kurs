@@ -343,7 +343,6 @@
         const courseNameEl = document.getElementById("courseName");
         const tableBody = document.getElementById("studentTableBody");
  
-        // Bu funksiya yalnız kurs.html-də işə düşür
         if (!courseNameEl || !tableBody) {
             return;
         }
