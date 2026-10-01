@@ -272,6 +272,57 @@
         });
     }
 
+    const menuBtn = document.querySelector('.user-menu > button');
+    const dropdown = document.getElementById('dropdown');
+    const profileInput = document.getElementById('profileImageInput');
+    const profileImage = document.getElementById('profileImage');
+    const logoutButton = document.getElementById('logoutButton');
+
+    if (menuBtn && dropdown) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.hidden = !dropdown.hidden;
+        });
+
+   
+        dropdown.addEventListener('click', (e) => e.stopPropagation());
+
+        document.addEventListener('click', () => { dropdown.hidden = true; });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') dropdown.hidden = true;
+        });
+    }
+
+    const savedAvatar = localStorage.getItem('adminAvatar');
+    if (savedAvatar && profileImage) profileImage.src = savedAvatar;
+
+    if (profileInput && profileImage) {
+        profileInput.addEventListener('change', () => {
+            const file = profileInput.files[0];
+            if (!file) return;
+            if (!file.type.startsWith('image/')) {
+                alert('Zəhmət olmasa şəkil faylı seçin.');
+                return;
+            }
+            if (file.size > 500 * 1024) {
+                alert('Şəkil 500 KB-dan kiçik olmalıdır.');
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = () => {
+                profileImage.src = reader.result;
+                localStorage.setItem('adminAvatar', reader.result);
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    }
+
     /* ---------- giriş forması (index.html) ---------- */
 
     function initLoginForm() {

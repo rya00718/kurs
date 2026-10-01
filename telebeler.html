@@ -37,6 +37,25 @@
             <h1 id="pageTitle">Tələbələr</h1>
             <div class="user-menu">
                 <button type="button">Admin</button>
+                <div id="dropdown" class="dropdown" hidden>
+                    <div class="dropdown-content">
+                        <div class="admin-card">
+                            <div class="admin-avatar">
+                                <label for="profileImageInput" class="avatar-label">
+                                    <input type="file" id="profileImageInput" accept="image/*" hidden>
+                                    <img src="data/def.png" alt="Admin Avatar" id="profileImage">
+                                </label>
+                                <strong>Admin</strong>
+                                <small>admin@example.com</small>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">Profil</a>
+                    <a href="#">Ayarlar</a>
+                    <a href="#">Parolu idarə et</a>
+                    <a href="#">Yeni profil əlavə et</a>
+                    <button type="button" id="logoutButton">Çıxış</button>
+                </div>
             </div>
         </header>
         <main>

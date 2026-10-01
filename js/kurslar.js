@@ -1,7 +1,6 @@
 (function () {
     "use strict";
  
-    
     const PAGE_SIZE = 6;
  
     const CATEGORY_LABELS = {
@@ -173,13 +172,13 @@
             return;
         }
  
-        const searchInput = document.getElementById("search");
+    
         const categorySelect = document.getElementById("category");
         const sortSelect = document.getElementById("sort");
         const statusSelect = document.getElementById("status");
  
         const params = window.KursUI.getQueryParams();
-        if (params.get("axtar")) searchInput.value = params.get("axtar");
+        
         if (params.get("kateqoriya")) categorySelect.value = params.get("kateqoriya");
         if (params.get("status")) statusSelect.value = params.get("status");
         if (params.get("sort")) sortSelect.value = params.get("sort");
@@ -203,7 +202,6 @@
  
         function updateUrl() {
             window.KursUI.setQueryParams({
-                axtar: searchInput.value.trim(),
                 kateqoriya: categorySelect.value,
                 status: statusSelect.value,
                 sort: sortSelect.value,
@@ -212,7 +210,7 @@
         }
  
         function renderCoursesList() {
-            const searchTerm = searchInput.value.trim().toLowerCase();
+            const searchTerm = "";
             const categoryValue = categorySelect.value;
             const statusValue = statusSelect.value;
             const sortValue = sortSelect.value;
@@ -308,12 +306,12 @@
             renderCoursesList();
         });
  
-        const debouncedSearch = window.KursUI.debounce(() => {
-            currentPage = 1;
-            renderCoursesList();
-        }, 300);
+        // const debouncedSearch = window.KursUI.debounce(() => {
+        //     currentPage = 1;
+        //     renderCoursesList();
+        // }, 300);
  
-        searchInput.addEventListener("input", debouncedSearch);
+        // searchInput.addEventListener("input", debouncedSearch);
  
         [categorySelect, statusSelect, sortSelect].forEach((select) => {
             select.addEventListener("change", () => {

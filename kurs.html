@@ -32,7 +32,29 @@
     <div class="main-content">
         <!-- yuxarı hissə -->
         <header class="topbar">
-            <div class="user-menu"><button type="button">Admin</button></div>
+            <h1 id="pageTitle">Kurs Mərkəzi Paneli</h1>
+            <div class="user-menu">
+                <button type="button">Admin</button>
+                <div id="dropdown" class="dropdown" hidden>
+                    <div class="dropdown-content">
+                        <div class="admin-card">
+                            <div class="admin-avatar">
+                                <label for="profileImageInput" class="avatar-label">
+                                    <input type="file" id="profileImageInput" accept="image/*" hidden>
+                                    <img src="data/def.png" alt="Admin Avatar" id="profileImage">
+                                </label>
+                                <strong>Admin</strong>
+                                <small>admin@example.com</small>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">Profil</a>
+                    <a href="#">Ayarlar</a>
+                    <a href="#">Parolu idarə et</a>
+                    <a href="#">Yeni profil əlavə et</a>
+                    <button type="button" id="logoutButton">Çıxış</button>
+                </div>
+            </div>
         </header>
         <!--sehife mezmunu-->
         <div class="page-content">
@@ -45,7 +67,8 @@
                 <h2 id="courseName">Kurs Adı</h2>
                 <p id="courseCategory">Kateqoriya.</p>
             </div>
-            <a href="kurslar.html" class="secondary-button">Kurslara Qayıt</a>
+            <button type="button" class="primary-button" id="addCourseButton"><a href="kurslar.html"
+                    class="secondary-button"></a>Kurslara Qayıt</button>
         </div>
 
         <main>

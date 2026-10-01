@@ -21,7 +21,7 @@
     <aside class="sidebar" id="sidebar">
         <p class="sidebar-title"> Kurs Mərkəzi Paneli</p>
         <nav aria-label="Əsas naviqasiya">
-            <a href="panel.html" >İcmal</a>
+            <a href="panel.html">İcmal</a>
             <a href="kurslar.html">Kurslar</a>
             <a href="telebeler.html">Tələbələr</a>
             <a href="muellimler.html" aria-current="page">Müəllimlər</a>
@@ -34,6 +34,25 @@
             <h1 id="pageTitle">Müəllimlər</h1>
             <div class="user-menu">
                 <button type="button">Admin</button>
+                <div id="dropdown" class="dropdown" hidden>
+                    <div class="dropdown-content">
+                        <div class="admin-card">
+                            <div class="admin-avatar">
+                                <label for="profileImageInput" class="avatar-label">
+                                    <input type="file" id="profileImageInput" accept="image/*" hidden>
+                                    <img src="data/def.png" alt="Admin Avatar" id="profileImage">
+                                </label>
+                                <strong>Admin</strong>
+                                <small>admin@example.com</small>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">Profil</a>
+                    <a href="#">Ayarlar</a>
+                    <a href="#">Parolu idarə et</a>
+                    <a href="#">Yeni profil əlavə et</a>
+                    <button type="button" id="logoutButton">Çıxış</button>
+                </div>
             </div>
         </header>
         <main>
@@ -78,8 +97,8 @@
                             <th>Ad</th>
                             <th>E-poçt</th>
                             <th>Telefon</th>
-                            <th>Tədris etdiyi kurs</th>
-                            <!-- <th>Status</th> -->
+                            <th>Tədris etdiyi kurslar</th>
+                            <th>Status</th>
                             <th>Əməliyyatlar</th>
                         </tr>
                     </thead>
@@ -148,6 +167,14 @@
                     </select>
                     <p class="field-error" id="teacherCourseError" hidden></p>
 
+                    <!-- <label for="teacherStatus">Status seçin</label>
+                    <select id="teacherStatus" name="status" required>
+                        <option value="">Seçin</option>
+                        <option value="aktiv">Aktiv</option>
+                        <option value="dondurulub">Dondurulub</option>
+                        <option value="bitirib">Bitirib</option>
+                    </select> -->
+
                     <div class="modal-actions">
                         <button type="submit" class="primary-button" id="saveTeacherButton">Yadda saxla</button>
                         <button type="button" id="cancelButton">Ləğv et</button>
@@ -186,4 +213,5 @@
     <script src="js/api.js" defer></script>
     <script src="js/ui.js" defer> </script>
     <script src="js/telebeler.js" defer></script>
+    <script src="js/muellimler.js" defer></script>
 </body>

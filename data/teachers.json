@@ -2,51 +2,72 @@
     {
         "id": "m-1",
         "ad": "Aygün Əhmədova",
-        "ixtisas": "Frontend inkişafı"
+        "ixtisas": "Frontend inkişafı",
+        "telefon": "+994 50 123 45 67",
+        "email": "aygun.ahmadova@example.com"
     },
     {
         "id": "m-2",
         "ad": "Elvin Cəfərquliyev",
-        "ixtisas": "Backend inkişafı"
+        "ixtisas": "Backend inkişafı",
+        "telefon": "+994 50 123 45 67",
+        "email": "elvin.ceferquliyev@example.com"
     },
     {
         "id": "m-3",
         "ad": "Nigar Abbasova",
-        "ixtisas": "UX/UI dizayn"
+        "ixtisas": "UX/UI dizayn",
+        "telefon": "+994 50 123 45 67",
+        "email": "nigar.abbasova@example.com"
     },
     {
         "id": "m-4",
         "ad": "Tural Məmmədov",
-        "ixtisas": "İngilis dili"
+        "ixtisas": "İngilis dili",
+        "telefon": "+994 50 123 45 67",
+        "email": "tural.mammadov@example.com"
     },
     {
         "id": "m-5",
         "ad": "Səbinə Orucova",
-        "ixtisas": "Qrafik dizayn"
+        "ixtisas": "Qrafik dizayn",
+        "telefon": "+994 50 123 45 67",
+        "email": "sebinə.orucova@example.com"
     },
     {
         "id": "m-6",
         "ad":"Əkbər Əkbərov",
-        "ixtisas":"Full-stack inkişaf"
+        "ixtisas":"Full-stack inkişaf",
+        "telefon": "+994 50 123 45 67",
+        "email": "ekber.ekberov@example.com"
     },
     {
         "id": "m-7",
         "ad":"Kamran İsmayılov",
-        "ixtisas":"Süni intellekt"
+        "ixtisas":"Süni intellekt",
+        "telefon": "+994 50 123 45 67",
+        "email": "kamran.ismayilov@example.com"
     },
     {   
         "id":"m-8",
         "ad":"Rauf Nəbiyev",
-        "ixtisas":"İtalyan dili"
+        "ixtisas":"İtalyan dili",
+        "telefon": "+994 50 123 45 67",
+        "email": "rauf.nebiyev@example.com"
+
     },
     {
         "id":"m-9",
         "ad":"Gülnar Talıbova",
-        "ixtisas":"Alman dili"
+        "ixtisas":"Alman dili",
+        "telefon": "+994 50 123 45 67",
+        "email": "gulnar.talibova@example.com"
     },
     {
         "id":"m-10",
         "ad":"Emin Vəlixanov",
-        "ixtisas":"Verilənlər bazası"
+        "ixtisas":"Verilənlər bazası",
+        "telefon": "+994 50 123 45 67",
+        "email": "emin.vəlixanov@example.com"
     }
 ]
